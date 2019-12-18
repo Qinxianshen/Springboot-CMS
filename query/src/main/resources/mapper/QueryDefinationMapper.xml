@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qin.query.dao.QueryDefinationMapper" >
+
+    <resultMap id="BaseResultMap" type="com.qin.query.domain.QueryDefination" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="definationName" property="definationName" jdbcType="VARCHAR" />
+        <result column="queryNum" property="queryNum" jdbcType="VARCHAR" />
+        <result column="datasouceName" property="datasouceName" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="pageSize" property="pageSize" jdbcType="INTEGER" />
+        <result column="createTime" property="createTime" jdbcType="VARCHAR" />
+        <result column="updateTime" property="updateTime" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="findQueryDefination" resultMap="BaseResultMap">
+        SELECT * from querydefination;
+    </select>
+
+</mapper>
