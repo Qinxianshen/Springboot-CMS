@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qin.query.dao.ChartDefinitionMapper" >
+
+    <resultMap id="BaseResultMap" type="com.qin.query.domain.ChartDefinition" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="chartType" property="chartType" jdbcType="VARCHAR" />
+        <result column="dimisionType" property="dimisionType" jdbcType="VARCHAR" />
+        <result column="frequence" property="frequence" jdbcType="VARCHAR" />
+        <result column="datasouceName" property="datasouceName" jdbcType="VARCHAR" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="createTime" property="createTime" jdbcType="VARCHAR" />
+        <result column="updateTime" property="updateTime" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="findChartDefinition" resultMap="BaseResultMap">
+        SELECT * from chartdefinition;
+    </select>
+
+</mapper>
