@@ -4,6 +4,7 @@ package com.qin.query.controller;
 import com.qin.query.domain.ChartDefinition;
 import com.qin.query.domain.result.TableResult;
 import com.qin.query.service.ChartDefinitionService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/query/v1.0/chartDefinition")
+@CrossOrigin(origins = "*")
 public class ChartDefinitionController {
 
     @Resource

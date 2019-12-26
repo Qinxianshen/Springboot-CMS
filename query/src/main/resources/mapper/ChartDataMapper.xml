@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qin.query.dao.ChartDataMapper" >
+
+    <resultMap id="BaseResultMap" type="com.qin.query.domain.ChartData" >
+        <result column="datatime" property="time" jdbcType="VARCHAR" />
+        <result column="data1" property="data1" jdbcType="VARCHAR" />
+        <result column="data2" property="data2" jdbcType="VARCHAR" />
+        <result column="data3" property="data3" jdbcType="VARCHAR" />
+        <result column="data4" property="data4" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="getChartData" resultMap="BaseResultMap">
+        select datatime,data1,data2,data3,data4 from echart;
+    </select>
+
+</mapper>
